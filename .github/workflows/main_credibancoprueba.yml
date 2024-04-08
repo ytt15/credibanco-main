@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - credibancoprod
+name: Build and deploy JAR app to Azure Web App - credibancoprueba
 
 on:
   push:
@@ -48,15 +48,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DC30301BBCA14E1DA8C9B1C99361CA98 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1CC0B8425FC6419084337A92C999C68E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_335D50C765FD47AB977823208D8CF132 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FC9BA9C7971946CA82EF12201BA48E66 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FB86D62BDEE840F98EC4DA45A11D2AB0 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C16E06303D7C4302AF6049A0A6B95305 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'credibancoprod'
+          app-name: 'credibancoprueba'
           slot-name: 'Production'
           package: '*.jar'
           
